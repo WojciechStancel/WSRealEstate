@@ -34,24 +34,24 @@ def search(request):
 
     queryset_list = Listing.objects.order_by('-list_date').filter(is_published=True)
 
-    if 'keywords' in request.GET: 
+    if 'keywords' in request.GET:
         keywords = request.GET['keywords']
         if keywords:
             queryset_list = queryset_list.filter(description__icontains=keywords)
-    
 
-    if 'city' in request.GET: 
+
+    if 'city' in request.GET:
         city = request.GET['city']
         if city:
             queryset_list = queryset_list.filter(city__iexact=city)
 
-    if 'state' in request.GET: 
-        state = request.GET['state']
+    if 'province' in request.GET:
+        state = request.GET['province']
         if state:
-            if state != 'State (All)':
+            if state != 'Province (All)':
                 queryset_list = queryset_list.filter(state__iexact=state)
-    
-    if 'bedrooms' in request.GET: 
+
+    if 'bedrooms' in request.GET:
         bedrooms = request.GET['bedrooms']
         if bedrooms:
             try:
@@ -60,7 +60,7 @@ def search(request):
             except ValueError:
                 pass
 
-    if 'price' in request.GET: 
+    if 'price' in request.GET:
         price = request.GET['price']
         if price:
             try:
