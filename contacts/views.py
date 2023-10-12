@@ -22,8 +22,8 @@ def contact(request):
             if has_contacted:
                 messages.error(request, 'You have already made an inquiry for this listing')
                 return redirect('/listings/'+listing_id)
-        
-        contact = Contact(listing_id=listing_id, listing=listing, name=name, email=email, 
+
+        contact = Contact(listing_id=listing_id, listing=listing, name=name, email=email,
         phone=phone, message=message, user_id=user_id)
 
         contact.save()
@@ -35,7 +35,6 @@ def contact(request):
             'wojtek895@gmail.com',
             [realtor_email],
             fail_silently=False
-
 
         )
 

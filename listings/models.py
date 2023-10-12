@@ -1,13 +1,18 @@
 from django.db import models
 from datetime import datetime
 from realtors.models import Realtor
+from .choices import state_choices
+
 
 class Listing(models.Model):
+
+    CHOICES = tuple((key, value) for key, value in state_choices.items())
+
     realtor = models.ForeignKey(Realtor, on_delete=models.DO_NOTHING)
     title = models.CharField(max_length=200)
     address = models.CharField(max_length=200)
     city = models.CharField(max_length=100)
-    state = models.CharField(max_length=100)
+    state = models.CharField(choices=CHOICES)
     zipcode = models.CharField(max_length=20)
     description = models.TextField(blank=True)
     price = models.IntegerField()
@@ -25,9 +30,8 @@ class Listing(models.Model):
     photo_6 = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True)
     is_published = models.BooleanField(default=True)
     list_date = models.DateTimeField(default=datetime.now, blank=True)
-    
+
 
     def __str__(self):
         return self.title
-    
-    
+

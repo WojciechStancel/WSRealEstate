@@ -9,11 +9,9 @@
         <div class="home-search p-5">
             <div class="overlay p-5">
                 <h1 class="display-4 mb-4">
-                    Property Searching Just Got So Easy
+                    One search engine - lots of possibilities
                 </h1>
-                <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae quas, asperiores
-                    eveniet vel nostrum magnam
-                    voluptatum tempore! Consectetur, id commodi!</p>
+                <p class="lead">Property search has never been easier!</p>
                 <div class="search">
                     <form action="{% url 'search' %}">
                         <!-- Form Row 1 -->
@@ -30,9 +28,9 @@
                             </div>
 
                             <div class="col-md-4 mb-3">
-                                <label class="sr-only">State</label>
+                                <label class="sr-only">Province</label>
                                 <select name="state" class="form-control">
-                                    <option selected="true">State (All)</option>
+                                    <option selected="true">Provinces (All)</option>
                                     {% for key,value in state_choices.items %}
                                         <option value="{{ key }}">{{ value }}</option>
                                     {% endfor %}
@@ -81,7 +79,7 @@
                 {% for listing in listings %}
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="card listing-preview">
-                        <img class="card-img-top" src="{{listing.photo_main.url}}" alt="">
+                        <img class="card-img-top" src="{{listing.photo_main.url}}" alt="photo of the property">
                         <div class="card-img-overlay">
                             <h2>
                                 <span class="badge badge-secondary text-white">${{listing.price | intcomma}}</span>
@@ -91,7 +89,7 @@
                             <div class="listing-heading text-center">
                                 <h4 class="text-primary">{{listing.tittle}}</h4>
                                 <p>
-                                    <i class="fas fa-map-marker text-secondary"></i> {{listing.city}} 
+                                    <i class="fas fa-map-marker text-secondary"></i> {{listing.city}}
                                     {{listing.state}}, {{listing.zipcode}}
                                 </p>
                             </div>
@@ -135,7 +133,7 @@
                     <p>No Listings Available</p>
                 </div>
             {% endif %}
-            
+
         </div>
     </div>
 </section>
@@ -147,25 +145,19 @@
                 <i class="fas fa-comment fa-4x mr-4"></i>
                 <hr>
                 <h3>Consulting Services</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, debitis nam! Repudiandae,
-                    provident iste consequatur
-                    hic dignissimos ratione ea quae.</p>
+                <p>We provide expert property advice. Our staff have many years of knowledge and experience.</p>
             </div>
             <div class="col-md-4">
                 <i class="fas fa-home fa-4x mr-4"></i>
                 <hr>
                 <h3>Propery Management</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, debitis nam! Repudiandae,
-                    provident iste consequatur
-                    hic dignissimos ratione ea quae.</p>
+                <p>If you want to sell your property but are worried about too much paperwork, contact us. We will take care of everything!</p>
             </div>
             <div class="col-md-4">
                 <i class="fas fa-suitcase fa-4x mr-4"></i>
                 <hr>
                 <h3>Renting & Selling</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, debitis nam! Repudiandae,
-                    provident iste consequatur
-                    hic dignissimos ratione ea quae.</p>
+                <p>We have been on the market for 15 years, in the beginning we only dealt with house sales, currently we also have a rental property offer.</p>
             </div>
         </div>
     </div>

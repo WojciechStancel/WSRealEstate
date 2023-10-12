@@ -8,8 +8,8 @@
     <div class="container">
       <div class="row text-center">
         <div class="col-md-12">
-          <h1 class="display-4">Browse Our Properties</h1>
-          <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, pariatur!</p>
+          <h1 class="display-4">Browse our real estate properties</h1>
+          <p class="lead">Best quality with lowest prices!</p>
         </div>
       </div>
     </div>
@@ -41,14 +41,14 @@
               <img class="card-img-top" src="{{ listing.photo_main.url }}" alt="">
               <div class="card-img-overlay">
                 <h2>
-                  <span class="badge badge-secondary text-white">${{listing.price | intcomma}}</span>
+                  <span class="badge badge-secondary text-white">€{{listing.price | intcomma}}</span>
                 </h2>
               </div>
               <div class="card-body">
                 <div class="listing-heading text-center">
                   <h4 class="text-primary">{{listing.title}}</h4>
                   <p>
-                    <i class="fas fa-map-marker text-secondary"></i> {{listing.city}} 
+                    <i class="fas fa-map-marker text-secondary"></i> {{listing.city}}
                     {{listing.state}}, {{listing.zipcode}} </p>
                 </div>
                 <hr>
@@ -86,7 +86,7 @@
             </div>
 
         {% endif %}
-        
+
       </div>
 
       <div class="row">
@@ -115,7 +115,7 @@
                   </li>
                 {% endif %}
             {% endfor %}
-            
+
             {% if listings.has_next %}
               <li class="page-item">
                 <a href="?page={{listings.next_page_number}}" class="page-link">&raquo;
