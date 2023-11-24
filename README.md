@@ -1,8 +1,8 @@
-# WS Real Estate
+# WS Real Estate (old-repository)
 
-
-
-Welcome to the WS Real Estate Agency web application. This application is built using Django for the backend and Bootstrap for the frontend. It serves as a platform for managing real estate listings, allowing users to browse and add property listings, as well as providing authentication and registration features. The application utilizes a PostgreSQL database, and it is hosted on Digital Ocean with Nginx as the web server.
+**Currently, app is hosted on AWS, repository with all informations are here: https://github.com/WojciechStancel/Real-Estate**
+---
+Welcome to the WS Real Estate Agency web application. This application is built using Django for the backend and Bootstrap for the frontend. It serves as a platform for managing real estate listings, allowing users to browse and add property listings, as well as providing authentication and registration features. The application utilizes a PostgreSQL database, and it was hosted on Digital Ocean with Nginx as the web server. 
 
 ## Features
 
@@ -11,7 +11,7 @@ Welcome to the WS Real Estate Agency web application. This application is built 
 - **Listing Management:** Registered users can add and manage their property listings.
 - **Admin Panel:** Administrators can manage users, listings, and website content.
 - **Database:** The application uses PostgreSQL for data storage, ensuring data integrity and security.
-- **Hosting:** The application is hosted on Digital Ocean, making it accessible online.
+- **Hosting:** The application was hosted on Digital Ocean.
 
 ## Technology Stack
 
@@ -34,11 +34,6 @@ To set up this application locally, follow these steps:
 7. Start the Django development server: `python manage.py runserver`
 
 For a production deployment, you will need to configure Nginx and gunicorn to serve the application.
-
-## Usage
-
-- Visit the application at http://161.35.199.38/
-- Register an account or log in to access advanced features.
 
 ## Acknowledgments
 
